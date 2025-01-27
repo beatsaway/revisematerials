@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>✨ DT Materials Quiz ✨</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      background-color: #f0f2f5;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .sentence {
+      margin-bottom: 30px;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    select {
+      border: 2px solid #ddd;
+      padding: 8px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    select:hover {
+      border-color: #999;
+    }
+
+    select.correct {
+      background-color: #d4f8d4;
+      border-color: #4CAF50;
+    }
+
+    select.incorrect {
+      background-color: #f8d4d4;
+      border-color: #f44336;
+    }
+
+    h2 {
+      text-align: center;
+      color: #1a73e8;
+      margin-bottom: 30px;
+    }
+
+    .year-section {
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+  <h2>🛠️ Year 8 Project: Photo Frame 🖼️</h2>
+  
+  <div class="year-section">
+    <div class="sentence">
+      For the front layer of the photoframe, we use 
+      <select onchange="checkAnswer(this, 'acrylic')">
+        <option value="">  </option>
+      </select>
+      because it's 
+      <select onchange="checkAnswer(this, 'transparent')">
+        <option value="">  </option>
+      </select>
+      to display the photo, 
+      <select onchange="checkAnswer(this, 'affordable')">
+        <option value="">  </option>
+      </select>
+      , and can be laser cut since it's a 
+      <select onchange="checkAnswer(this, 'thermoplastic')">
+        <option value="">  </option>
+      </select>
+      . ✨
+    </div>
+    
+    <div class="sentence">
+      The frame is made from 
+      <select onchange="checkAnswer(this, 'pinewood')">
+        <option value="">  </option>
+      </select>
+      because it's 
+      <select onchange="checkAnswer(this, 'affordable')">
+        <option value="">  </option>
+      </select>
+      and has 
+      <select onchange="checkAnswer(this, 'nice natural grain')">
+        <option value="">  </option>
+      </select>
+      . 🌳
+    </div>
+    
+    <div class="sentence">
+      For the back, we use 
+      <select onchange="checkAnswer(this, 'HIPS')">
+        <option value="">  </option>
+      </select>
+      as it's a good 
+      <select onchange="checkAnswer(this, 'moisture barrier')">
+        <option value="">  </option>
+      </select>
+      , 
+      <select onchange="checkAnswer(this, 'hard')">
+        <option value="">  </option>
+      </select>
+      , 
+      <select onchange="checkAnswer(this, 'affordable')">
+        <option value="">  </option>
+      </select>
+      , and comes in 
+      <select onchange="checkAnswer(this, 'various colors')">
+        <option value="">  </option>
+      </select>
+      . 🎨
+    </div>
+
+    <div class="sentence">
+      The screws are made from 
+      <select onchange="checkAnswer(this, 'mild steel')">
+        <option value="">  </option>
+      </select>
+      , an 
+      <select onchange="checkAnswer(this, 'alloy')">
+        <option value="">  </option>
+      </select>
+      of iron and carbon. Since it contains iron, it's 
+      <select onchange="checkAnswer(this, 'ferrous')">
+        <option value="">  </option>
+      </select>
+      , meaning it's 
+      <select onchange="checkAnswer(this, 'magnetic')">
+        <option value="">  </option>
+      </select>
+      and can 
+      <select onchange="checkAnswer(this, 'rust')">
+        <option value="">  </option>
+      </select>
+      if not protected. Metal is 
+      <select onchange="checkAnswer(this, 'stronger')">
+        <option value="">  </option>
+      </select>
+      than timber, making it ideal for securing the frame. 🔧
+    </div>
+  </div>
+
+  <h2>⏰ Year 9 Project: Clock ⏰</h2>
+  
+  <div class="year-section">
+    <div class="sentence">
+      We use 
+      <select onchange="checkAnswer(this, 'MDF')">
+        <option value="">  </option>
+      </select>
+      for the clock base. It's a 
+      <select onchange="checkAnswer(this, 'man-made')">
+        <option value="">  </option>
+      </select>
+      , manufactured timber that's 
+      <select onchange="checkAnswer(this, 'affordable')">
+        <option value="">  </option>
+      </select>
+      , easy to 
+      <select onchange="checkAnswer(this, 'cut')">
+        <option value="">  </option>
+      </select>
+       and 
+      <select onchange="checkAnswer(this, 'drill')">
+        <option value="">  </option>
+      </select>
+      . 🔨
+    </div>
+    
+    <div class="sentence">
+      The top layer of the clock is made from 
+      <select onchange="checkAnswer(this, 'acrylic')">
+        <option value="">  </option>
+      </select>
+      because it's 
+      <select onchange="checkAnswer(this, 'affordable')">
+        <option value="">  </option>
+      </select>
+      , comes in many 
+      <select onchange="checkAnswer(this, 'colors')">
+        <option value="">  </option>
+      </select>
+      , and is a 
+      <select onchange="checkAnswer(this, 'thermoplastic')">
+        <option value="">  </option>
+      </select>
+      that can be laser cut and engraved. ✨
+    </div>
+  </div>
+
+  <script>
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    function populateOptions() {
+      const optionsMap = {
+        'acrylic': ['acrylic', 'pinewood', 'HIPS'],
+        'transparent': ['transparent', 'hard', 'thermosetting'],
+        'affordable': ['affordable', 'expensive'],
+        'thermoplastic': ['thermoplastic', 'metal', 'timber'],
+        'pinewood': ['pinewood', 'HIPS', 'acrylic'],
+        'nice natural grain': ['nice natural grain', 'no grain', 'waterproof property'],
+        'HIPS': ['HIPS', 'acrylic', 'pinewood'],
+        'moisture barrier': ['moisture barrier', 'thermosetting plastic', 'alloy'],
+        'hard': ['hard', 'transparent', 'cheap'],
+        'various colors': ['various colors', 'timber grains', 'only one color'],
+        'mild steel': ['mild steel', 'stainless steel', 'aluminum'],
+        'alloy': ['alloy', 'element', 'plastic'],
+        'ferrous': ['ferrous', 'non-ferrous'],
+        'magnetic': ['magnetic', 'non-magnetic'],
+        'rust': ['rust', 'never rust'],
+        'stronger': ['stronger', 'weaker'],
+        'MDF': ['MDF', 'pinewood', 'HIPS'],
+        'man-made': ['man-made', 'natural', 'thermoplastic'],
+        'cut': ['cut', 'bend', 'weld'],
+        'drill': ['drill', 'melt', 'break'],
+        'colors': ['colors', 'grains', 'types of metal']
+      };
+
+      document.querySelectorAll('select').forEach(select => {
+        const correctValue = select.getAttribute('onchange').match(/'([^']+)'/)[1];
+        const options = optionsMap[correctValue] || [];
+        const shuffledOptions = shuffleArray([...options]);
+        
+        shuffledOptions.forEach(option => {
+          const optElement = document.createElement('option');
+          optElement.value = option;
+          optElement.textContent = option;
+          select.appendChild(optElement);
+        });
+      });
+    }
+
+    function checkAnswer(select, correctValue) {
+      if (select.value === correctValue) {
+        select.classList.remove("incorrect");
+        select.classList.add("correct");
+      } else {
+        select.classList.remove("correct");
+        select.classList.add("incorrect");
+      }
+    }
+
+    // Initialize the quiz when the page loads
+    window.onload = populateOptions;
+  </script>
+</body>
+</html>
