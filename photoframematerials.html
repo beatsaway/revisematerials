@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill in the Blanks Exercise</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 18px;
+            background-color: #f0f8ff;
+            color: #333;
+            padding: 20px;
+        }
+        select {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 18px;
+            margin: 5px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fill in the Blanks</h1>
+        <p>For the front, we use <select id="frontPlastic" onchange="checkAnswer('frontPlastic', 'acrylic')">
+            <option value=""> </option>
+            <option value="PVC">PVC</option>
+            <option value="acrylic">acrylic</option>
+            <option value="polycarbonate">polycarbonate</option>
+        </select> plastic because it's <select id="frontFeature" onchange="checkAnswer('frontFeature', 'transparent')">
+            <option value=""> </option>
+            <option value="lightweight">lightweight</option>
+            <option value="durable">durable</option>
+            <option value="transparent">transparent</option>
+        </select>, to display the photo. It's a <select id="frontType" onchange="checkAnswer('frontType', 'thermoplastic')">
+            <option value=""> </option>
+            <option value="thermosetting">thermosetting</option>
+            <option value="thermoplastic">thermoplastic</option>
+        </select> plastic, can be laser cut and engraved.<br>✨ The frame is <select id="frameWood" onchange="checkAnswer('frameWood', 'pinewood')">
+            <option value=""> </option>
+            <option value="spruce">spruce</option>
+            <option value="cedar">cedar</option>
+            <option value="pinewood">pinewood</option>
+        </select>. It's softwood from <select id="treeType" onchange="checkAnswer('treeType', 'coniferous')">
+            <option value=""> </option>
+            <option value="deciduous">deciduous</option>
+            <option value="coniferous">coniferous</option>
+        </select> trees, often more affordable than <select id="comparisonTree" onchange="checkAnswer('comparisonTree', 'deciduous')">
+            <option value=""> </option>
+            <option value="hardwood">hardwood</option>
+            <option value="deciduous">deciduous</option>
+        </select> trees. It has nice woodgrain because it's from <select id="woodSource" onchange="checkAnswer('woodSource', 'natural')">
+            <option value=""> </option>
+            <option value="reclaimed">reclaimed</option>
+            <option value="natural">natural</option>
+        </select> timber. 🌳</p>
+
+        <p>For the back, we use <select id="backPlastic" onchange="checkAnswer('backPlastic', 'HIPS')">
+            <option value=""> </option>
+            <option value="ABS">ABS</option>
+            <option value="PETG">PETG</option>
+            <option value="HIPS">HIPS</option>
+        </select> plastic. It's a <select id="backFeature" onchange="checkAnswer('backFeature', 'good')">
+            <option value=""> </option>
+            <option value="excellent">excellent</option>
+            <option value="good">good</option>
+            <option value="decent">decent</option>
+        </select> moisture barrier. It's <select id="backCost" onchange="checkAnswer('backCost', 'affordable')">
+            <option value=""> </option>
+            <option value="expensive">expensive</option>
+            <option value="affordable">affordable</option>
+        </select>. It comes in <select id="backColors" onchange="checkAnswer('backColors', 'various')">
+            <option value=""> </option>
+            <option value="limited">limited colours</option>
+            <option value="various">various colours</option>
+        </select> 🎨.</p>
+    </div>
+
+    <script>
+        function checkAnswer(selectId, correctAnswer) {
+            const selectBox = document.getElementById(selectId);
+            if (selectBox.value === correctAnswer) {
+                selectBox.style.backgroundColor = 'lightgreen';
+            } else {
+                selectBox.style.backgroundColor = 'lightcoral';
+            }
+        }
+    </script>
+</body>
+</html>
